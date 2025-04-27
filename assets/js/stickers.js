@@ -3,7 +3,6 @@ const sticker1Input = document.getElementById('sticker1');
 const sticker2Input = document.getElementById('sticker2');
 const sticker3Input = document.getElementById('sticker3');
 const verifyButton = document.getElementById('verify-stickers');
-const resultMessage = document.getElementById('sticker-result');
 
 // Función para verificar la cantidad de stickers seleccionados
 function verificarStickers() {
@@ -17,11 +16,26 @@ function verificarStickers() {
     
     // Verificar si el total está dentro del límite (10)
     if (totalStickers <= 10) {
-        resultMessage.textContent = `Llevas ${totalStickers} stickers`;
-        resultMessage.className = 'result-message success';
+        // Mostrar SweetAlert2 con mensaje de éxito que se cierra automáticamente después de 2 segundos
+        Swal.fire({
+            title: '¡Perfecto!',
+            text: `Llevas ${totalStickers} stickers`,
+            icon: 'success',
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: '#4CAF50',
+            timer: 2000,  // 2000 milisegundos = 2 segundos
+            timerProgressBar: true,  // Muestra una barra de progreso
+            showConfirmButton: false  // Oculta el botón de confirmación
+        });
     } else {
-        resultMessage.textContent = 'Llevas demasiados stickers';
-        resultMessage.className = 'result-message error';
+        // Mostrar SweetAlert2 con mensaje de error (se mantiene igual)
+        Swal.fire({
+            title: '¡Atención!',
+            text: 'Llevas demasiados stickers',
+            icon: 'error',
+            confirmButtonText: 'Entendido',
+            confirmButtonColor: '#d33'
+        });
     }
 }
 

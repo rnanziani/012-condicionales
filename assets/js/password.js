@@ -3,7 +3,6 @@ const digit1Select = document.getElementById('digit1');
 const digit2Select = document.getElementById('digit2');
 const digit3Select = document.getElementById('digit3');
 const verifyButton = document.getElementById('verify-password');
-const resultMessage = document.getElementById('password-result');
 
 // Función para verificar el password
 function verificarPassword() {
@@ -17,23 +16,36 @@ function verificarPassword() {
     
     // Verificar si el password es correcto
     if (password === '911') {
-        resultMessage.textContent = 'Password 1 correcto';
-        resultMessage.className = 'result-message success';
+        Swal.fire({
+            title: '¡Correcto!',
+            text: 'Password 1 correcto',
+            icon: 'success',
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: '#4CAF50'
+        });
     } else if (password === '714') {
-        resultMessage.textContent = 'Password 2 correcto';
-        resultMessage.className = 'result-message success';
+        Swal.fire({
+            title: '¡Correcto!',
+            text: 'Password 2 correcto',
+            icon: 'success',
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: '#4CAF50'
+        });
     } else {
-        resultMessage.textContent = 'Password incorrecto';
-        resultMessage.className = 'result-message error';
+        Swal.fire({
+            title: '¡Error!',
+            text: 'Password incorrecto',
+            icon: 'error',
+            confirmButtonText: 'Intentar de nuevo',
+            confirmButtonColor: '#d33'
+        });
     }
 }
 
 // Agregar evento click al botón de verificación
 verifyButton.addEventListener('click', verificarPassword);
 
-// Verificar al cargar la página
+// Verificar al cargar la página (opcional)
 document.addEventListener('DOMContentLoaded', function() {
-    // Limpiar el mensaje de resultado al inicio
-    resultMessage.textContent = '';
-    resultMessage.className = 'result-message';
+    // No es necesario mostrar ningún mensaje al inicio
 });
