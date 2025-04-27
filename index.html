@@ -13,59 +13,60 @@
 <body>
     <header class="nav-menu">
         <div class="logo">
-            <h1>My Website</h1>
+            <h1>Ejercicio de Condicionales</h1>
         </div>
         <nav class="desktop-menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Acerca de Nosotros</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contactos</a></li>
+        </ul>
         </nav>
         <div class="mobile-menu">
             <span class="hamburger">☰</span>
         </div>
     </header>
 
-    <section class="search-filters">
-        <h2>Search Filters</h2>
+    <section class="buscar-paginas">
+        <h2>Buscar Páginas</h2>
         <div class="filter-options">
             <div class="filter-item">
-                <label for="category">Category</label>
-                <select id="category">
-                    <option value="">All Categories</option>
-                    <option value="nature">Nature</option>
-                    <option value="city">City</option>
-                    <option value="people">People</option>
+                <label for="pagina">Páginas</label>
+                <select id="pagina" onchange="navegarAPagina()">
+                    <option value="index.html">Ejercicio 1</option>
+                    <option value="stickers.html">Ejercicio 2</option>
+                    <option value="password.html">Ejercicio 3</option>
                 </select>
-            </div>
-            <div class="filter-item">
-                <label for="search">Search</label>
-                <input type="text" id="search" placeholder="Search...">
             </div>
         </div>
     </section>
 
     <main class="main-content">
-        <h2>Main Content</h2>
+        <h2>Ejercicio N°1 - Modificar Borde de Imagen</h2>
         <div class="image-container">
-            <img id="toggle-image" src="https://via.placeholder.com/400x300" alt="Placeholder Image">
-            <p>Click on the image to toggle the border</p>
+            <img id="toggle-image" src="./assets/img/imgNode-01.png" alt="Placeholder Image">
+            <p class="paragraph-image-container">Hacer click en la imagen para modificar el borde</p>
         </div>
     </main>
 
     <footer class="page-footer">
         <div class="footer-content">
-            <p>&copy; 2023 My Website. All rights reserved.</p>
+            <p>&copy; 2025 Soluwork. Todos los derechos reservados.</p>
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact Us</a>
+                <a href="#">Politica de Seguridad</a>
+                <a href="#">Terminos de Servicios</a>
+                <a href="#">Contactanos</a>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        function navegarAPagina() {
+            const select = document.getElementById('pagina');
+            window.location.href = select.value;
+        }
+    </script>
 </body>
 </html>

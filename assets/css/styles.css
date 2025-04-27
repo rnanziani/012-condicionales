@@ -9,6 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #e8f5e9; /* Color verde clarito para el body */
 }
 
 /* Mobile layout using grid-template-areas */
@@ -31,7 +32,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #f8f9fa;
+    background-color: #c8e6c9; /* Color verde clarito para el header */
     border-radius: 5px;
 }
 
@@ -68,8 +69,7 @@ body {
     gap: 0.5rem;
 }
 
-.filter-item select,
-.filter-item input {
+.filter-item select, .filter-item input {
     padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -78,8 +78,11 @@ body {
 .main-content {
     grid-area: main;
     padding: 1rem;
-    background-color: #f8f9fa;
+    background-color: #c8e6c9;
     border-radius: 5px;
+}
+.paragraph-image-container {
+    font-weight: bold;
 }
 
 .image-container {
@@ -91,7 +94,8 @@ body {
 }
 
 .image-container img {
-    max-width: 100%;
+    max-width: 80%;
+    border-radius: 10%;
     height: auto;
     cursor: pointer;
     transition: border 0.3s ease;
@@ -100,7 +104,7 @@ body {
 .page-footer {
     grid-area: footer;
     padding: 1rem;
-    background-color: #f8f9fa;
+    background-color: #c8e6c9; /* Color verde clarito para el footer */
     border-radius: 5px;
 }
 
@@ -123,6 +127,91 @@ body {
 
 .footer-links a:hover {
     text-decoration: underline;
+}
+
+/* Stickers page styles */
+.stickers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.sticker-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sticker-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sticker-input input {
+    width: 60px;
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Password page styles */
+.password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.select-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.select-group select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 60px;
+    text-align: center;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result-message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
 }
 
 /* Desktop layout (576px and above) */
@@ -173,5 +262,17 @@ body {
     .footer-links {
         flex-direction: row;
         gap: 1rem;
+    }
+
+    /* Stickers page desktop styles */
+    .stickers-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /* Password page desktop styles */
+    .password-container {
+        width: 60%;
+        margin: 2rem auto;
     }
 }
