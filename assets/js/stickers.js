@@ -23,7 +23,7 @@ function verificarStickers() {
             icon: 'success',
             confirmButtonText: 'Aceptar',
             confirmButtonColor: '#4CAF50',
-            timer: 2000,  // 2000 milisegundos = 2 segundos
+            timer: 1000,  // 1000 milisegundos = 1 segundo
             timerProgressBar: true,  // Muestra una barra de progreso
             showConfirmButton: false  // Oculta el botón de confirmación
         });
