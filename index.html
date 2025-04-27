@@ -13,7 +13,7 @@
 <body>
     <header class="nav-menu">
         <div class="logo">
-            <h1>My Website</h1>
+            <h1>Ejercicio de Condicionales</h1>
         </div>
         <nav class="desktop-menu">
             <ul>
@@ -28,21 +28,16 @@
         </div>
     </header>
 
-    <section class="search-filters">
-        <h2>Search Filters</h2>
+    <section class="buscar-paginas">
+        <h2>Buscar Páginas</h2>
         <div class="filter-options">
             <div class="filter-item">
-                <label for="category">Category</label>
-                <select id="category">
-                    <option value="">All Categories</option>
-                    <option value="nature">Nature</option>
-                    <option value="city">City</option>
-                    <option value="people">People</option>
+                <label for="pagina">Página</label>
+                <select id="pagina" onchange="navegarAPagina()">
+                    <option value="index.html">Ejercicio 1</option>
+                    <option value="stickers.html">Ejercicio 2</option>
+                    <option value="password.html">Ejercicio 3</option>
                 </select>
-            </div>
-            <div class="filter-item">
-                <label for="search">Search</label>
-                <input type="text" id="search" placeholder="Search...">
             </div>
         </div>
     </section>
@@ -66,6 +61,12 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        function navegarAPagina() {
+            const select = document.getElementById('pagina');
+            window.location.href = select.value;
+        }
+    </script>
 </body>
 </html>
