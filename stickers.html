@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Stickers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/stickers.css">
+</head>
+<body>
+    <header class="nav-menu">
+        <div class="logo">
+            <h1>Ejercicio de Condicionales</h1>
+        </div>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu">
+            <span class="hamburger">☰</span>
+        </div>
+    </header>
+
+    <section class="buscar-paginas">
+        <h2>Buscar Páginas</h2>
+        <div class="filter-options">
+            <div class="filter-item">
+                <label for="pagina">Páginas</label>
+                <select id="pagina" onchange="navegarAPagina()">
+                    <option value="index.html">Ejercicio 1</option>
+                    <option value="stickers.html" selected>Ejercicio 2</option>
+                    <option value="password.html">Ejercicio 3</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <h2>Ejercicio N°2 - Selección de Stickers</h2>
+        <p class="instructions">Puedes seleccionar hasta 10 stickers en total</p>
+        
+        <div class="stickers-container">
+            <div class="sticker-item">
+                <img src="./assets/img/sticker1.png" alt="Sticker 1">
+                <div class="sticker-input">
+                    <label for="sticker1">Cantidad:</label>
+                    <input type="number" id="sticker1" min="0" max="10" value="0">
+                </div>
+            </div>
+            
+            <div class="sticker-item">
+                <img src="./assets/img/sticker2.png" alt="Sticker 2">
+                <div class="sticker-input">
+                    <label for="sticker2">Cantidad:</label>
+                    <input type="number" id="sticker2" min="0" max="10" value="0">
+                </div>
+            </div>
+            
+            <div class="sticker-item">
+                <img src="./assets/img/sticker3.png" alt="Sticker 3">
+                <div class="sticker-input">
+                    <label for="sticker3">Cantidad:</label>
+                    <input type="number" id="sticker3" min="0" max="10" value="0">
+                </div>
+            </div>
+        </div>
+        
+        <button id="verify-stickers">Verificar Selección</button>
+        <p id="sticker-result" class="result-message"></p>
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-content">
+            <p>&copy; 2023 My Website. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/stickers.js"></script>
+    <script>
+        function navegarAPagina() {
+            const select = document.getElementById('pagina');
+            window.location.href = select.value;
+        }
+    </script>
+</body>
+</html>
