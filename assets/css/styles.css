@@ -81,7 +81,9 @@ body {
     background-color: #c8e6c9;
     border-radius: 5px;
 }
-
+.paragraph-image-container {
+    font-weight: bold;
+}
 
 .image-container {
     display: flex;
@@ -92,7 +94,8 @@ body {
 }
 
 .image-container img {
-    max-width: 100%;
+    max-width: 80%;
+    border-radius: 10%;
     height: auto;
     cursor: pointer;
     transition: border 0.3s ease;
